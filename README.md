@@ -1,2 +1,8 @@
-# thelab-welfare-model
+# thelab-welfare-model aKa URBAN INTELLIGENCE & POLICY SYSTEMS (tentative name)
 We are building an urban intelligence platform that reveals the true value of a location by weighting environmental health risks against future development potential. Our framework goes beyond standard real estate pricing to account for hidding health costs and long term urban shifts. We have built a team that bridges the gap between environmental economics, data science, applied math, and chemical engineering to solve this. This gives developers, planners, and investors a data-driven way to see not just what a parcel of land is worth today but also how it is value will change as the environment and the neighborhoods evolve. 
+
+Current stage
+We are currently in the R&D Phase I, having finalized our project roadmap and core welfare framework. Our team is now building the data pipeline and the initial econometric model to integrate environmental risk data with spatial economic indicators. We are actively working across environmental science and welfare economics to deliver a "proof of concept" that validates how environmental exposure and development potential interact to drive housing prices. Our model should be grounded in the real-life market preferences to ensure and validate through statistical and commercial viability. This project is more than an academic exercise but a potential scalable platform with real-world application in the urban planning and policy sectors. 
+
+Our next endeavur
+We are registered to present in the Collider Cup expo. Beyond the technical validation, we are seeing it as a an opportunity to position UIPS as a serious interdisciplinary force. This event is the ideal environment to validate our framework's relevance and gather the critical feedback needed to bridge the ga between our current research and real world urban development. 
