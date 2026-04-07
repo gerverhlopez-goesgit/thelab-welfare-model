@@ -1,4 +1,4 @@
-# 🌍 Environmental Impact — Pricing a Location
+# Environmental Impact — Pricing a Location
 
 This is a work in progress… will keep you updated once this draft is completed. Will walk you through during our next meeting - Gerver.
 
