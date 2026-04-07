@@ -1,7 +1,7 @@
 # 👥 TheLAB Team
 
 Hello and welcome.  
-We are thankful to be here and grateful for your time.  
+We are thankful to be here and grateful for you to be here.  
 Now, let’s introduce the team.
 
 ---
