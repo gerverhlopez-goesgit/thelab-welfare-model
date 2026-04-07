@@ -1,8 +1,8 @@
-# ⚙️ TheLAB — Project Roadmap (Phase 1)
+# TheLAB — Project Roadmap (Phase 1)
 
 ---
 
-## 📘 Logic Model
+## Logic Model
 
 | Milestone | Status | Deliverable | Notes |
 |----------|--------|------------|-------|
