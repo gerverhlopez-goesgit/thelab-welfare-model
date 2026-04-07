@@ -6,3 +6,12 @@ We are currently in the R&D Phase I, having finalized our project roadmap and co
 
 Our next endeavur
 We are registered to present in the Collider Cup expo. Beyond the technical validation, we are seeing it as a an opportunity to position UIPS as a serious interdisciplinary force. This event is the ideal environment to validate our framework's relevance and gather the critical feedback needed to bridge the ga between our current research and real world urban development. 
+
+# Core Team Structure
+
+| Role | Primary Focus | Key Responsibilities | Core Outputs | Metrics for Success |
+|------|--------------|---------------------|--------------|--------------------|
+| **Strategy & Policy Lead** | Vision & Strategy | Define project direction, lead partnerships, guide fundraising efforts, and ensure overall alignment of research and product development | Pitch deck, roadmap, partnership outreach, academic collaborations | Successful pilot launch, positive stakeholder feedback, validated hedonic and causal models |
+| **Economic Modeling** | Welfare Model | Define welfare valuation framework (WTP & CV), specify hedonic model, translate coefficients into monetary welfare estimates, and design causal identification strategy | Welfare framework document, model specifications, contribution to pitch and research outputs | Empirically validated models, credible welfare estimates, support for funding and partnerships |
+| **Director of Quantitative Systems / Data Lead** | Platform & Data | Build and manage integrated datasets (pollution, housing, amenities), develop Development Potential Index, ensure reproducibility, and conduct robustness and sensitivity tests | Clean master dataset, Development Potential Index (v1), regression outputs, robustness report, spatial visualizations | Statistically robust and reproducible model, scalable data pipeline |
+| **Director of Market & Product Strategy** | Market | Identify target users (developers, cities, investors), conduct customer discovery, analyze competitors, and define MVP value proposition and pricing | Customer segmentation brief, competitive analysis, MVP definition, pricing strategy, outreach pipeline | Validated MVP, clear customer demand, early partnerships or interest |
