@@ -11,8 +11,9 @@
 $$\ln(P) = \beta_0 + \sum(\beta_i S_i) + \sum(\gamma_j N_j) + \sum(\delta_k E_k) + \epsilon$$
 
 ### Variable Definitions:
-* [cite_start]**$\ln(P)$ (The Price):** The natural log of the final market price, allowing for percentage-based valuation analysis[cite: 106, 107].
-* [cite_start]**$\beta_0$ (The Base Value):** The baseline price of a property before accounting for specific features or risks[cite: 110, 111].
+
+* **$\ln(P)$ (The Price):** The natural log of the final market price, allowing for percentage-based valuation analysis[cite: 106, 107].
+* **$\beta_0$ (The Base Value):** The baseline price of a property before accounting for specific features or risks[cite: 110, 111].
 * **$S_i$ (Structural):** Physical traits like square footage, bedrooms, or a swimming pool[cite: 113].
 * **$N_j$ (Neighborhood):** Location traits such as school district ratings or crime rates[cite: 117].
 * **$E_k$ (Environmental):** Natural surroundings and risks, including air quality index or flood zone status[cite: 121].
