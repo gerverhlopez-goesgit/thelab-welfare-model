@@ -1,4 +1,4 @@
-# 👥 TheLAB Team
+## TheLAB Team
 
 Hello and welcome.  
 We are thankful to be here and grateful for you to be here.  
