@@ -1,0 +1,147 @@
+## Narges, Zhuoni, & Gerver's Notes — Week 3  
+**Saturday, April 4, 2026**
+
+---
+
+## Platform Structure
+
+The structure of our platform is based on four core components:
+
+1. **Physical characteristics of the home**  
+2. **Current neighborhood amenities**  
+3. **Environmental hazards**  
+4. **Indicators of future growth**
+
+---
+
+## Hedonic Model Framework
+
+The model treats a property's price as an **itemized receipt** of its individual features.
+
+- **Net Welfare Calculation:**
+
+
+- **Willingness to Pay (WTP) for Safety:**
+
+
+Where:
+- **β₁** = Risk coefficient  
+- **P** = Total property price  
+
+---
+
+## Measurement & Data Extraction
+
+| Category                | Variables to Measure                                                                 | Potential Data Sources                                      |
+|------------------------|---------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| **Outcome (Price)**    | Log of home sale prices per transaction; Rent Index                                   | Zillow, Redfin, local real estate transaction logs          |
+| **Environmental Risk** | PM2.5, NO₂, Ozone, proximity to TRI sites or refineries                               | EPA databases, satellite imagery, TRI (Toxic Release Inventory) |
+| **Development Potential** | Building permits, transit projects, grocery store penetration                     | Municipal planning portals, zoning data, institutional plans |
+| **Controls**           | Crime rates, school scores, demographics, commute times                               | Census Bureau, police departments, school district reports  |
+
+---
+
+## Econometric Identification Strategy
+
+To isolate environmental effects from broader market trends, we use:
+
+### 1. Difference-in-Differences (Shock Approach)
+Measures price changes **before and after an environmental shock**, such as:
+- Opening/closing of industrial plants  
+- Pollution spikes or reductions  
+
+---
+
+### 2. Regression Discontinuity (Boundary Analysis)
+Compares **nearly identical homes** located:
+- Across regulatory boundaries  
+- Near pollution thresholds  
+
+---
+
+### 3. Instrumental Variables (IV Approach)
+Uses external factors to isolate causal effects:
+
+- Wind patterns  
+- Distance from highways or major roads  
+
+These help separate **air quality effects** from other neighborhood characteristics.
+
+---
+
+## Key Pollutants & Environmental Factors
+
+### 1. PM2.5 (Fine Particulate Matter)
+- Most critical variable in the model  
+- Penetrates lungs and bloodstream  
+- Causes respiratory and cardiovascular diseases  
+
+**Model Impact:**
+- Increase in PM2.5 → Decrease in home prices  
+- Interpreted as a **"health contamination signal"**
+
+---
+
+### 2. Nitrogen Dioxide (NO₂) & Ozone (O₃)
+- Indicators of traffic-related pollution  
+- Strongly correlated with proximity to highways  
+
+**Model Role:**
+- Proxy for environmental exposure risk  
+- Leads to **lower willingness to pay (WTP)**  
+- Even high-income households may discount these areas  
+
+---
+
+### 3. Toxic Release Inventory (TRI)
+Tracks hazardous chemical releases such as:
+- Lead  
+- Mercury  
+- Carcinogens  
+
+**Research Strategy:**
+- Facility openings/closures act as **natural experiments (shocks)**  
+- Measures how markets price proximity to toxic exposure  
+
+**Additional Effect:**
+- Captures **aesthetic and perceived risk penalties**
+
+---
+
+## Environmental Risk Pricing Effects
+
+| Particle / Factor      | Data Source        | Impact on Price (β₁)         |
+|-----------------------|------------------|------------------------------|
+| **PM2.5**             | EPA / Satellite  | Negative (Health Penalty)    |
+| **NO₂ / Ozone**       | EPA Monitoring   | Negative (Location Discount) |
+| **TRI Site Proximity**| TRI Database     | Strong Negative (Risk Penalty) |
+| **Refinery Emissions**| Direct Proximity | Negative (Amenity Loss)      |
+
+---
+
+## Conceptual Framework: Risk vs Development
+
+Environmental and economic forces interact as follows:
+
+- **Pollution → Value Penalty**
+- **Infrastructure → Development Potential Index (DPI)**
+
+Infrastructure acts as a **counterweight** to environmental risk:
+
+> Areas with high pollution may still retain or gain value if future development potential is strong.
+
+---
+
+## Example
+
+Living near a refinery or hazardous site may:
+
+- Reduce property value due to health risks  
+- Lower desirability due to pollution and aesthetics  
+- Introduce a measurable **"Value Penalty"**
+
+---
+
+## Final Note
+
+If you have any questions, feel free to reach out!
