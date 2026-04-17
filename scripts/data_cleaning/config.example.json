@@ -1,0 +1,17 @@
+{
+  "data": {
+    "n_samples": 2500,
+    "random_seed": 42,
+    "shock_intensity": 0.2
+  },
+  "hedonic": {
+    "test_size": 0.25,
+    "standardize_features": true
+  },
+  "econometric": {
+    "did_treatment_year": 2015,
+    "rdd_bandwidth": 1.5,
+    "confidence_level": 0.95
+  },
+  "output_dir": "output"
+}

@@ -3,6 +3,7 @@ Main pipeline orchestrator for hedonic pricing model.
 Coordinates data generation, processing, modeling, and analysis.
 """
 
+import argparse
 import os
 import sys
 import pandas as pd
@@ -10,7 +11,7 @@ from datetime import datetime
 
 from config import (
     DataConfig, HedonicConfig, EconometricConfig,
-    DEFAULT_DATA_CONFIG, DEFAULT_HEDONIC_CONFIG, DEFAULT_ECONOMETRIC_CONFIG
+    load_pipeline_config
 )
 from data_generation import SyntheticDataGenerator
 from data_processor import DataProcessor, process_pipeline
@@ -39,9 +40,9 @@ class HedonicPricingPipeline:
             econometric_config: EconometricConfig for econometric methods
             output_dir: Directory to save outputs
         """
-        self.data_config = data_config or DEFAULT_DATA_CONFIG
-        self.hedonic_config = hedonic_config or DEFAULT_HEDONIC_CONFIG
-        self.econometric_config = econometric_config or DEFAULT_ECONOMETRIC_CONFIG
+        self.data_config = data_config or DataConfig()
+        self.hedonic_config = hedonic_config or HedonicConfig()
+        self.econometric_config = econometric_config or EconometricConfig()
         self.output_dir = output_dir
         
         # Create output directory
@@ -304,23 +305,50 @@ class HedonicPricingPipeline:
             raise
 
 
+def _build_arg_parser() -> argparse.ArgumentParser:
+    """Build CLI parser for pipeline execution."""
+    parser = argparse.ArgumentParser(description="Run hedonic pricing analysis pipeline.")
+    parser.add_argument(
+        "--config",
+        type=str,
+        default=None,
+        help="Path to JSON config file with pipeline overrides.",
+    )
+    parser.add_argument(
+        "--samples",
+        type=int,
+        default=None,
+        help="Optional override for data.n_samples.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default=None,
+        help="Optional output directory override.",
+    )
+    return parser
+
+
 def main():
     """Main entry point."""
-    
-    # Configure models
-    data_config = DataConfig(n_samples=1000)
-    hedonic_config = HedonicConfig()
-    econometric_config = EconometricConfig()
-    
-    # Create and run pipeline
+    parser = _build_arg_parser()
+    args = parser.parse_args()
+
+    pipeline_config = load_pipeline_config(config_path=args.config)
+
+    if args.samples is not None:
+        pipeline_config.data.n_samples = args.samples
+    if args.output_dir:
+        pipeline_config.output_dir = args.output_dir
+
     pipeline = HedonicPricingPipeline(
-        data_config=data_config,
-        hedonic_config=hedonic_config,
-        econometric_config=econometric_config,
-        output_dir='output'
+        data_config=pipeline_config.data,
+        hedonic_config=pipeline_config.hedonic,
+        econometric_config=pipeline_config.econometric,
+        output_dir=pipeline_config.output_dir,
     )
-    
-    pipeline.run_full_pipeline(n_samples=1000)
+
+    pipeline.run_full_pipeline(n_samples=pipeline_config.data.n_samples)
 
 
 if __name__ == "__main__":

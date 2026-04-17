@@ -27,3 +27,37 @@ Where:
 
 #### Difference-in-Differences (DiD)
 Measures treatment effects by comparing price changes in treated vs control regions before/after environmental shocks:
+
+## Configuration Framework
+
+The pipeline now uses a layered configuration framework with this precedence:
+
+1. Dataclass defaults in `config.py`
+2. JSON config file overrides
+3. Environment variable overrides
+4. CLI overrides (for sample size and output path)
+
+### JSON config
+
+Copy and edit `config.example.json`, then run:
+
+```bash
+python main.py --config config.example.json
+```
+
+### Environment overrides
+
+Use `HEDONIC_` prefixed variables with `__` for nested keys:
+
+```powershell
+$env:HEDONIC_DATA__N_SAMPLES = "5000"
+$env:HEDONIC_HEDONIC__TEST_SIZE = "0.3"
+$env:HEDONIC_OUTPUT_DIR = "output_custom"
+python main.py
+```
+
+### CLI overrides
+
+```bash
+python main.py --config config.example.json --samples 3000 --output-dir output_exp_01
+```
