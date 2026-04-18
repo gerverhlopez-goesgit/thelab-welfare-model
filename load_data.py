@@ -1,16 +1,9 @@
-# load_data.py
-
+import requests
 import pandas as pd
 
-# Example: Load housing data
-housing = pd.read_csv("../../data/raw/housing.csv")
+def fetch_air_quality(zip_code, api_key):
+    url = f"https://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode={zip_code}&API_KEY={api_key}"
+    response = requests.get(url)
+    return response.json()
 
-# Example: Load pollution data
-pollution = pd.read_csv("../../data/raw/pollution.csv")
-
-# Preview
-print("Housing Data:")
-print(housing.head())
-
-print("\nPollution Data:")
-print(pollution.head())
+# You would then pass this real data into your HedonicPricingModel
