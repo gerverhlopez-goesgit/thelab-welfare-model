@@ -42,7 +42,7 @@ class PollutionDataFactory:
         self.housing_df['counterfactual_pm25'] = target_pollution
         return self.housing_df
 
-# Example usage for a commit test
+# Example usage for a commit 
 if __name__ == "__main__":
     # This acts as a 'dummy' test to show the Lead it works
     sample_homes = pd.DataFrame({
